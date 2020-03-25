@@ -1,0 +1,20 @@
+{
+  "name": "ReadMe-Generator-CLI",
+  "version": "1.0.0",
+  "description": "CLI that generates ReadMe.md files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eshi44/ReadMe-Generator-CLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eshi44/ReadMe-Generator-CLI/issues"
+  },
+  "homepage": "https://github.com/Eshi44/ReadMe-Generator-CLI#readme"
+}
