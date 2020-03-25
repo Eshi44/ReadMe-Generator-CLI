@@ -13,7 +13,37 @@ inquirer.prompt([
     type: "input", 
     message: "What is your project's description?", 
     name: "projectDescription"
-}
+},
+{
+    type: "input", 
+    message: "What is your table of contents?", 
+    name: "tableOfContents",
+},
+{
+    type: "input", 
+    message: "What is your installation?", 
+    name: "installation",
+},
+{
+    type: "input", 
+    message: "What is your usage?", 
+    name: "usage",
+},
+{
+    type: "input", 
+    message: "What is your license?", 
+    name: "license",
+},
+{
+    type: "input", 
+    message: "Who is contributing?", 
+    name: "contributing",
+},
+{
+    type: "input", 
+    message: "What is your tests?", 
+    name: "tests",
+},
 
 ]).then(function(resp) {
     console.log("Your project title is " + resp.projectTitle);
