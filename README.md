@@ -12,12 +12,12 @@ ReadMe Generator CLI
 This ReadMe Generator is a command line application that takes user input from a prompt, as well as the user's GitHub username to extract objects from an axios call. All information collected is written to a ReadMe file specifically for your repo. 
 
 ## Table of Contents
- *Installation
- *Usage
- *License
- *Contributing
- *Tests
- *Questions
+ -Installation
+ -Usage
+ -License
+ -Contributing
+ -Tests
+ -Questions
  
 ## Installation Directions 
 
