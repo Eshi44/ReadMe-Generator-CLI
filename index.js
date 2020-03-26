@@ -13,6 +13,12 @@ inquirer.prompt([
     message: "What is your GitHub username?", 
     name: "userName",
 },
+//email
+{
+    type: "input", 
+    message: "What is your email?", 
+    name: "email",
+},
 //project title    
 {
     type: "input", 
@@ -67,7 +73,7 @@ inquirer.prompt([
 },
 
 
-]).then(({userName, projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
+]).then(({userName, email, projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
 axios
 .get(`https://api.github.com/users/${userName}`)
 .then(function(resp) {   
@@ -82,12 +88,12 @@ ${projectTitle}  \n
 ## Project Description \n
 ${projectDescription} \n
 ## Table of Contents
-    -Installation
-    -Usage
-    -License
-    -Contributing
-    -Tests
-    -Questions
+*Installation
+*Usage
+*License
+*Contributing
+*Tests
+*Questions
 ## Installation Directions \n
 ${installation} \n
 ## Usage \n
@@ -99,17 +105,17 @@ ${contributing} \n
 ## Tests \n
 ${tests} \n
 ## Questions \n
-<img src="${resp.data.avatar_url}" style="height:50px;width:50px" alt="Avatar"/> \n
-<p>If you have any question regarding this repo, please open an issue by contacting ${resp.data.name} at ${resp.data.email} </p>
+<img src="${resp.data.avatar_url}" style="width:100px;border-radius:50%"  alt="Avatar"/> \n
+<p>If you have any question regarding this repo, please open an issue by contacting ${resp.data.name} at ${email}.</p>
 `;
-fs.appendFile("README.md", userInput, err => {
+fs.writeFile("README.md", userInput, err => {
     if (err) {
       return console.log(err);
     }
     console.log("The README.md file has been written!");
 })
 })
-.catch(err => {
+.catch(error => {
     if(error) return console.log(error);
     console.log("No errors!")
 })

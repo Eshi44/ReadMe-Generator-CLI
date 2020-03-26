@@ -1,7 +1,7 @@
 
 # Project Title 
 
-CLI  
+ReadMe Generator CLI  
 
 ![Version Badge](https://img.shields.io/static/v1?label=Version&message=1.1.0&color=important) 
 ![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue) 
@@ -9,22 +9,22 @@ CLI
 
 ## Project Description 
 
-Generator 
+This ReadMe Generator is a command line application that takes user input from a prompt, as well as the user's GitHub username to extract objects from an axios call. All information collected is written to a ReadMe file specifically for your repo. 
 
 ## Table of Contents
-    -Installation
-    -Usage
-    -License
-    -Contributing
-    -Tests
-    -Questions
+*Installation
+*Usage
+*License
+*Contributing
+*Tests
+*Questions
 ## Installation Directions 
 
 npm install 
 
 ## Usage 
 
-N/A 
+Anyone can use this repo 
 
 ## License 
 
@@ -32,7 +32,7 @@ MIT
  
 ## Contributing 
 
-N/A 
+Anyone can contribute 
 
 ## Tests 
 
@@ -40,6 +40,6 @@ npm test
 
 ## Questions 
 
-<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" style="height:50px;width:50px"> 
+<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" style="width:100px;border-radius:50%"  alt="Avatar"/> 
 
-<p>If you have any question regarding this repo, please open an issue by contacting Emerald Hamel-Iervolino at null </p>
+<p>If you have any question regarding this repo, please open an issue by contacting Emerald Hamel-Iervolino at e.hameliervolino@gmail.com.</p>
