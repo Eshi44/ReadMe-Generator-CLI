@@ -1,44 +1,45 @@
 
-# Project Title: 
+# Project Title 
 
-1  
+CLI ReadMe Generator  
 
-![Version Badge](https://img.shields.io/static/v1?label=Version&message=1&color=important) 
-
+![Version Badge](https://img.shields.io/static/v1?label=Version&message=1.1.0&color=important) 
 ![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue) 
 
 
-## Project Description: 
+## Project Description 
 
-1 
+Generates ReadMe 
 
-## Table of Contents:
-    "-Installation"
-    "-Usage"
-    "-License"
-    "-Contributing"
-    "-Tests"
-    "-Questions"
-## Installation Directions: 
+## Table of Contents
+    -Installation
+    -Usage
+    -License
+    -Contributing
+    -Tests
+    -Questions
+## Installation Directions 
 
-1 
+npm install 
 
-## Usage: 
+## Usage 
 
-1 
+N/A 
 
 ## License 
 
 MIT 
 
-## Contributing: 
+## Contributing 
 
-1 
+Anyone can contribute 
 
-## Tests: 
+## Tests 
 
 npm test 
 
-## Questions: 
+## Questions 
 
+<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" alt="User avatar"/> 
 
+<p>If you have any question regarding this repo, please open an issue by contacting Emerald at null </p>

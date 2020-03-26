@@ -3,9 +3,22 @@ const inquirer = require("inquirer");
 //js file system module- allows you to work with the fs on your comp
 const fs = require("fs");
 // axios call
+const axios = require("axios");
 // const axios = require("./api.js");
 
 inquirer.prompt([
+//name
+{
+    type: "input", 
+    message: "What is your first name?", 
+    name: "name",
+},
+//username
+{
+    type: "input", 
+    message: "What is your GitHub username?", 
+    name: "userName",
+},
 //project title    
 {
     type: "input", 
@@ -60,42 +73,51 @@ inquirer.prompt([
 },
 
 
-]).then(({projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
-    
+]).then(({name, userName, projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
+axios
+.get(`https://api.github.com/users/${userName}`)
+.then(function(resp) {   
+console.log(resp.data);
+
 const userInput = `
-# Project Title: \n
+# Project Title \n
 ${projectTitle}  \n
 ![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) 
-
 ![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue) \n
 
-## Project Description: \n
+## Project Description \n
 ${projectDescription} \n
-## Table of Contents:
-    "-Installation"
-    "-Usage"
-    "-License"
-    "-Contributing"
-    "-Tests"
-    "-Questions"
-## Installation Directions: \n
+## Table of Contents
+    -Installation
+    -Usage
+    -License
+    -Contributing
+    -Tests
+    -Questions
+## Installation Directions \n
 ${installation} \n
-## Usage: \n
+## Usage \n
 ${usage} \n
 ## License \n
 ${license} \n
-## Contributing: \n
+## Contributing \n
 ${contributing} \n
-## Tests: \n
+## Tests \n
 ${tests} \n
-## Questions: \n
-
+## Questions \n
+<img src="${resp.data.avatar_url}" alt="User avatar"/> \n
+<p>If you have any question regarding this repo, please open an issue by contacting ${name} at ${resp.data.email} </p>
 `;
 fs.appendFile("README.md", userInput, err => {
     if (err) {
       return console.log(err);
     }
     console.log("The README.md file has been written!");
+})
+})
+.catch(err => {
+    if(error) return console.log(error);
+    console.log("No errors!")
 })
     
 }).catch(error => {
@@ -104,11 +126,3 @@ fs.appendFile("README.md", userInput, err => {
 });
 
 
-// fileName = resp.name.toLowerCase().split(' ').join('')+ ".json";
-//  fs.writeFile(filename, JSON.stringify(resp, null, '\t'), function(error) {
-
-//     if (error) {
-//     return console.log(error);
-//         }
-    
-//         console.log("Success!");
