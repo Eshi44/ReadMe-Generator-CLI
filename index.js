@@ -67,16 +67,17 @@ const userInput = `
 ${projectTitle}  \n
 ![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) 
 
-![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue) 
+![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue) \n
+
 ## Project Description: \n
 ${projectDescription} \n
 ## Table of Contents:
-    -Installation
-    -Usage
-    -License
-    -Contributing
-    -Tests
-    -Questions
+    "-Installation"
+    "-Usage"
+    "-License"
+    "-Contributing"
+    "-Tests"
+    "-Questions"
 ## Installation Directions: \n
 ${installation} \n
 ## Usage: \n
