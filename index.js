@@ -46,6 +46,9 @@ inquirer.prompt([
 },
 
 ]).then(function(resp) {
-    console.log("Your project title is " + resp.projectTitle);
+    console.log(resp);
 
+}).catch(error => {
+    if(error) return console.log(error);
+    console.log("No errors!")
 });
