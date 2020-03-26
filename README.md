@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # Project Title: 
 
 1  
@@ -40,3 +41,5 @@ npm test
 ## Questions: 
 
 
+=======
+>>>>>>> f6f7337e4b041d59425830885d73c805d3445374
