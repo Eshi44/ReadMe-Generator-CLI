@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 //js file system module- allows you to work with the fs on your comp
 const fs = require("fs");
 // axios call
-const axios = require("./api.js");
+// const axios = require("./api.js");
 
 inquirer.prompt([
 //project title    
