@@ -44,9 +44,46 @@ inquirer.prompt([
     message: "What is your tests?", 
     name: "tests",
 },
+{
+    type: "questions", 
+    message: "What are your questions?", 
+    name: "questions",
+},
 
-]).then(({projectTitle, projectDescription, tableOfContents, installation, usage,license, contributors, tests })=> {
+]).then(({projectTitle, projectDescription, tableOfContents, installation, usage,license, contributors, tests, questions })=> {
     
+const userInput = `
+
+# Project Title: \n
+${projectTitle}  \n
+# License \n
+${license} \n
+## Project Description: \n
+${projectDescription} \n
+## Table of Contents:\n 
+${tableOfContents} \n
+## Installation Directions: \n
+${installation} \n
+## Usage: \n
+${usage} \n
+## Contributors: \n
+${contributors} \n
+## Tests: \n
+${tests} \n
+## Questions: \n
+${questions}
+`;
+fs.appendFile("README.md", userInput, err => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("The README.md file has been written!");
+})
+    
+}).catch(error => {
+    if(error) return console.log(error);
+    console.log("No errors!")
+});
 
 
 // fileName = resp.name.toLowerCase().split(' ').join('')+ ".json";
@@ -57,16 +94,3 @@ inquirer.prompt([
 //         }
     
 //         console.log("Success!");
-    
-//       });
-
-
-
-
-}).catch(error => {
-    if(error) return console.log(error);
-    console.log("No errors!")
-});
-
-
-
