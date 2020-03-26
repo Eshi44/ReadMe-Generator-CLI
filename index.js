@@ -65,21 +65,22 @@ inquirer.prompt([
 const userInput = `
 # Project Title: \n
 ${projectTitle}  \n
-![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) \n
+![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) 
+![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue) \n
 ## Project Description: \n
 ${projectDescription} \n
 ## Table of Contents:\n 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
+    1. [Installation](#installation)
+    2. [Usage](#usage)
+    3. [License](#license)
+    4. [Contributing](#contributing)
+    5. [Tests](#tests)
+    6. [Questions](#questions)
 ## Installation Directions: \n
 ${installation} \n
 ## Usage: \n
 ${usage} \n
-# License \n
+## License \n
 ${license} \n
 ## Contributing: \n
 ${contributing} \n
