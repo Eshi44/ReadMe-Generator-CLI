@@ -107,7 +107,7 @@ ${contributing} \n
 ${tests} \n
 ## Questions \n
 <img src="${resp.data.avatar_url}" width="100" alt="Avatar"/> \n
-<p>If you have any question regarding this repo, please open an issue by contacting ${resp.data.name} at ${email}.</p>
+<p>If you have any questions regarding this repo, please open an issue by contacting ${resp.data.name} at ${email}.</p>
 `;
 fs.writeFile("README.md", userInput, err => {
     if (err) {
