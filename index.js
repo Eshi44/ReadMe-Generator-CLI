@@ -60,22 +60,23 @@ inquirer.prompt([
 },
 
 
-]).then(({projectTitle, version, projectDescription, installation, usage,license, contributing, tests,})=> {
+]).then(({projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
     
 const userInput = `
 # Project Title: \n
 ${projectTitle}  \n
 ![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) 
-![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue) \n
+
+![License Badge](https://img.shields.io/static/v1?label=License&message=${license}&color=blue) 
 ## Project Description: \n
 ${projectDescription} \n
-## Table of Contents:\n 
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Questions](#questions)
+## Table of Contents:
+    -Installation
+    -Usage
+    -License
+    -Contributing
+    -Tests
+    -Questions
 ## Installation Directions: \n
 ${installation} \n
 ## Usage: \n
