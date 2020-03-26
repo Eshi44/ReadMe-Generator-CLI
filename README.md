@@ -40,6 +40,6 @@ npm test
 
 ## Questions 
 
-<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" style="height:100px;width:100px alt="Avatar"/> 
+<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" style="height:100px;width:100px"> 
 
 <p>If you have any question regarding this repo, please open an issue by contacting Emerald Hamel-Iervolino at null </p>

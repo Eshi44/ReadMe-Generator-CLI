@@ -99,7 +99,7 @@ ${contributing} \n
 ## Tests \n
 ${tests} \n
 ## Questions \n
-<img src="${resp.data.avatar_url}" style="height:100px;width:100px alt="Avatar"/> \n
+<img src="${resp.data.avatar_url}" style="height:100px;width:100px" alt="Avatar"/> \n
 <p>If you have any question regarding this repo, please open an issue by contacting ${resp.data.name} at ${resp.data.email} </p>
 `;
 fs.appendFile("README.md", userInput, err => {
