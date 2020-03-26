@@ -1,7 +1,7 @@
 //inquirer module from npm 
-var inquirer = require("inquirer");
+const inquirer = require("inquirer");
 //js file system module- allows you to work with the fs on your comp
-var fs = require("fs");
+const fs = require("fs");
 
 inquirer.prompt([
 {
@@ -37,7 +37,7 @@ inquirer.prompt([
 {
     type: "input", 
     message: "Who is contributing?", 
-    name: "contributing",
+    name: "contributors",
 },
 {
     type: "input", 
@@ -45,10 +45,28 @@ inquirer.prompt([
     name: "tests",
 },
 
-]).then(function(resp) {
-    console.log(resp);
+]).then(({projectTitle, projectDescription, tableOfContents, installation, usage,license, contributors, tests })=> {
+    
+
+
+// fileName = resp.name.toLowerCase().split(' ').join('')+ ".json";
+//  fs.writeFile(filename, JSON.stringify(resp, null, '\t'), function(error) {
+
+//     if (error) {
+//     return console.log(error);
+//         }
+    
+//         console.log("Success!");
+    
+//       });
+
+
+
 
 }).catch(error => {
     if(error) return console.log(error);
     console.log("No errors!")
 });
+
+
+
