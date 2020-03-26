@@ -25,7 +25,7 @@ npm install
 
 ## Usage 
 
-Anyone can use this repo 
+N/A 
 
 ## License 
 
@@ -33,7 +33,7 @@ MIT
  
 ## Contributing 
 
-Anyone can contribute 
+N/A 
 
 ## Tests 
 
