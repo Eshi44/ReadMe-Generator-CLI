@@ -2,81 +2,91 @@
 const inquirer = require("inquirer");
 //js file system module- allows you to work with the fs on your comp
 const fs = require("fs");
+// axios call
+const axios = require("./api.js");
 
 inquirer.prompt([
+//project title    
 {
     type: "input", 
-    message: "What is your project title?", 
+    message: "What is your project's name?", 
     name: "projectTitle",
 },
+//version
 {
     type: "input",
     message: "What version?",
     name: "version",
+    default: "1.1.0",
 },
+//description
 {
     type: "input", 
-    message: "What is your project's description?", 
+    message: "Please write a short description of your project.", 
     name: "projectDescription"
 },
+
+//install
 {
     type: "input", 
-    message: "What is your table of contents?", 
-    name: "tableOfContents",
+    message: "What command should be run to install dependencies?", 
+    name: "installation", 
+    default: "npm install"
 },
+//usage
 {
     type: "input", 
-    message: "What is your installation?", 
-    name: "installation",
-},
-{
-    type: "input", 
-    message: "What is your usage?", 
+    message: "What does the user need to know about using the repo?", 
     name: "usage",
 },
+//license
 {
-    type: "input", 
-    message: "What is your license?", 
+    type: "list", 
+    message: "What kind of license should your project have?", 
     name: "license",
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'N/A'],
 },
 {
     type: "input", 
-    message: "Who is contributing?", 
-    name: "contributors",
+    message: "What does the user need to know about contributing to the repo?", 
+    name: "contributing",
 },
+//test
 {
     type: "input", 
-    message: "What is your tests?", 
+    message: "What command should be run to run tests?", 
     name: "tests",
-},
-{
-    type: "questions", 
-    message: "What are your questions?", 
-    name: "questions",
+    default: "npm test",
 },
 
-]).then(({projectTitle, version, projectDescription, tableOfContents, installation, usage,license, contributors, tests, questions })=> {
+
+]).then(({projectTitle, version, projectDescription, installation, usage,license, contributing, tests,})=> {
     
 const userInput = `
-![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) \n
 # Project Title: \n
 ${projectTitle}  \n
-# License \n
-${license} \n
+![Version Badge](https://img.shields.io/static/v1?label=Version&message=${version}&color=important) \n
 ## Project Description: \n
 ${projectDescription} \n
 ## Table of Contents:\n 
-${tableOfContents} \n
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
 ## Installation Directions: \n
 ${installation} \n
 ## Usage: \n
 ${usage} \n
-## Contributors: \n
-${contributors} \n
+# License \n
+${license} \n
+## Contributing: \n
+${contributing} \n
 ## Tests: \n
 ${tests} \n
 ## Questions: \n
-${questions}
+
 `;
 fs.appendFile("README.md", userInput, err => {
     if (err) {
