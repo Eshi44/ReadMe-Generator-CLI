@@ -1,7 +1,7 @@
 
 # Project Title 
 
-CLI ReadMe Generator  
+CLI  
 
 ![Version Badge](https://img.shields.io/static/v1?label=Version&message=1.1.0&color=important) 
 ![License Badge](https://img.shields.io/static/v1?label=License&message=MIT&color=blue) 
@@ -9,7 +9,7 @@ CLI ReadMe Generator
 
 ## Project Description 
 
-Generates ReadMe 
+Generator 
 
 ## Table of Contents
     -Installation
@@ -29,10 +29,10 @@ N/A
 ## License 
 
 MIT 
-
+ 
 ## Contributing 
 
-Anyone can contribute 
+N/A 
 
 ## Tests 
 
@@ -40,6 +40,6 @@ npm test
 
 ## Questions 
 
-<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" alt="User avatar"/> 
+<img src="https://avatars0.githubusercontent.com/u/60118647?v=4" style="height:100px;width:100px alt="Avatar"/> 
 
-<p>If you have any question regarding this repo, please open an issue by contacting Emerald at null </p>
+<p>If you have any question regarding this repo, please open an issue by contacting Emerald Hamel-Iervolino at null </p>

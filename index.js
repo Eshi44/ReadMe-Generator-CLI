@@ -7,12 +7,6 @@ const axios = require("axios");
 // const axios = require("./api.js");
 
 inquirer.prompt([
-//name
-{
-    type: "input", 
-    message: "What is your first name?", 
-    name: "name",
-},
 //username
 {
     type: "input", 
@@ -73,7 +67,7 @@ inquirer.prompt([
 },
 
 
-]).then(({name, userName, projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
+]).then(({userName, projectTitle, version, projectDescription, installation, usage, license, contributing, tests,})=> {
 axios
 .get(`https://api.github.com/users/${userName}`)
 .then(function(resp) {   
@@ -99,14 +93,14 @@ ${installation} \n
 ## Usage \n
 ${usage} \n
 ## License \n
-${license} \n
+${license} \n 
 ## Contributing \n
 ${contributing} \n
 ## Tests \n
 ${tests} \n
 ## Questions \n
-<img src="${resp.data.avatar_url}" alt="User avatar"/> \n
-<p>If you have any question regarding this repo, please open an issue by contacting ${name} at ${resp.data.email} </p>
+<img src="${resp.data.avatar_url}" style="height:100px;width:100px alt="Avatar"/> \n
+<p>If you have any question regarding this repo, please open an issue by contacting ${resp.data.name} at ${resp.data.email} </p>
 `;
 fs.appendFile("README.md", userInput, err => {
     if (err) {
